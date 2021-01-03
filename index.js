@@ -7,7 +7,12 @@ import { addon as Rule } from 'nano-css/addon/rule'
 import { addon as Jsx } from 'nano-css/addon/jsx'
 import { createElement } from 'react'
 
-const nano = create({ h: createElement })
+const nano = create({
+	h: createElement,
+	hash: function (obj) {
+		return 'hello'
+	}
+})
 
 Hydrate(nano)
 Prefixer(nano)
