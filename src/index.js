@@ -7,9 +7,13 @@ import { addon as Rule } from 'nano-css/addon/rule'
 import { addon as Jsx } from 'nano-css/addon/jsx'
 import { createElement } from 'react'
 import joli from '@blackblock/joli'
+import basicList from '@blackblock/css-chars'
+import withUpsideDownChars from '@blackblock/css-chars/withUpsideDownChars'
+
+const charList = withUpsideDownChars(basicList)
 
 const generator = joli({
-	chars: 'abc'
+	chars: charList
 })
 
 const nano = create({
@@ -30,4 +34,6 @@ Jsx(nano)
 
 const { rule, sheet, jsx, keyframes } = nano
 
-export { nano, rule, sheet, jsx, keyframes }
+export { rule, sheet, jsx, keyframes }
+
+export default nano
