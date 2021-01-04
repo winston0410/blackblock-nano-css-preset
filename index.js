@@ -6,12 +6,19 @@ import { addon as Cache } from 'nano-css/addon/cache'
 import { addon as Rule } from 'nano-css/addon/rule'
 import { addon as Jsx } from 'nano-css/addon/jsx'
 import { createElement } from 'react'
+import joli from '@blackblock/joli'
+
+const generator = joli({
+	chars: 'abc'
+})
 
 const nano = create({
+	pfx: '',
 	h: createElement,
 	hash: function (obj) {
-		return 'hello'
-	}
+		return generator.next().value
+	},
+	sh: typeof document === 'object' ? document.getElementById('nano-css') : null
 })
 
 Hydrate(nano)
