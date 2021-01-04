@@ -1,11 +1,29 @@
 {
-	"name": "@blackblock/nano-css-preset",
-	"version": "0.1.0",
-	"main": "./index.js",
-	"author": "Hugo Sum",
-	"license": "MIT",
-	"dependencies": {
-		"nano-css": "^5.3.0",
-		"react": "^17.0.1"
-	}
+  "name": "@blackblock/nano-css-preset",
+  "version": "0.1.0",
+  "author": "Hugo Sum",
+  "license": "MIT",
+  "type": "commonjs",
+  "files": [
+    "dist/"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node build.js",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "nano-css": "^5.3.0",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.8.29"
+  }
 }
