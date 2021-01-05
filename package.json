@@ -1,29 +1,33 @@
 {
-  "name": "@blackblock/nano-css-preset",
-  "version": "0.1.0",
-  "author": "Hugo Sum",
-  "license": "MIT",
-  "type": "commonjs",
-  "files": [
-    "dist/"
-  ],
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
-    }
-  },
-  "scripts": {
-    "build": "node build.js",
-    "prepublish": "yarn build"
-  },
-  "dependencies": {
-    "nano-css": "^5.3.0",
-    "react": "^17.0.1"
-  },
-  "devDependencies": {
-    "esbuild": "^0.8.29"
-  }
+	"name": "@blackblock/nano-css-preset",
+	"version": "0.1.0",
+	"author": "Hugo Sum",
+	"license": "MIT",
+	"type": "commonjs",
+	"files": [
+		"dist/"
+	],
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"exports": {
+		".": {
+			"require": "./dist/cjs/index.js",
+			"default": "./dist/esm/index.js"
+		}
+	},
+	"scripts": {
+		"build": "npx rollup -c",
+		"build:esbuild": "node build.js",
+		"prepublish": "yarn build"
+	},
+	"dependencies": {
+		"nano-css": "^5.3.0",
+		"react": "^17.0.1"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^17.0.0",
+		"@rollup/plugin-node-resolve": "^11.0.1",
+		"esbuild": "^0.8.29",
+		"rollup": "^2.35.1"
+	}
 }
