@@ -9,12 +9,9 @@ const { addon: Jsx } = require('nano-css/addon/jsx')
 import { createElement } from 'react'
 import joli from '@blackblock/joli'
 import basicList from '@blackblock/css-chars'
-import withUpsideDownChars from '@blackblock/css-chars/withUpsideDownChars'
-
-const charList = withUpsideDownChars(basicList)
 
 const generator = joli({
-	chars: charList
+	chars: basicList
 })
 
 const nano = create({
