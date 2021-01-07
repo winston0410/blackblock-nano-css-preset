@@ -1,11 +1,11 @@
-import { create } from 'nano-css'
-import { addon as Hydrate } from 'nano-css/addon/hydrate'
-import { addon as Prefixer } from 'nano-css/addon/prefixer'
-import { addon as Keyframes } from 'nano-css/addon/keyframes'
-import { addon as Cache } from 'nano-css/addon/cache'
-import { addon as Rule } from 'nano-css/addon/rule'
-import { addon as Drule } from 'nano-css/addon/drule'
-import { addon as Jsx } from 'nano-css/addon/jsx'
+const { create } = require('nano-css')
+const { addon: Hydrate } = require('nano-css/addon/hydrate')
+const { addon: Prefixer } = require('nano-css/addon/prefixer')
+const { addon: Keyframes } = require('nano-css/addon/keyframes')
+const { addon: Cache } = require('nano-css/addon/cache')
+const { addon: Rule } = require('nano-css/addon/rule')
+const { addon: Drule } = require('nano-css/addon/drule')
+const { addon: Jsx } = require('nano-css/addon/jsx')
 import { createElement } from 'react'
 import joli from '@blackblock/joli'
 import basicList from '@blackblock/css-chars'
