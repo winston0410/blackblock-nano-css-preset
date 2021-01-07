@@ -4,6 +4,7 @@ import { addon as Prefixer } from 'nano-css/addon/prefixer'
 import { addon as Keyframes } from 'nano-css/addon/keyframes'
 import { addon as Cache } from 'nano-css/addon/cache'
 import { addon as Rule } from 'nano-css/addon/rule'
+import { addon as Drule } from 'nano-css/addon/drule'
 import { addon as Jsx } from 'nano-css/addon/jsx'
 import { createElement } from 'react'
 import joli from '@blackblock/joli'
@@ -30,6 +31,7 @@ Prefixer(nano)
 Keyframes(nano)
 Cache(nano)
 Rule(nano)
+Drule(nano)
 Jsx(nano)
 
 const { rule, sheet, jsx, keyframes } = nano

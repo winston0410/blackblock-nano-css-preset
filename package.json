@@ -20,6 +20,7 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
+    "@blackblock/css-chars": "^0.1.0",
     "nano-css": "^5.3.0",
     "react": "^17.0.1"
   },
